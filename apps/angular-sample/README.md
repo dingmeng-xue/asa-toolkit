@@ -7,7 +7,7 @@ The sample project comes from https://angular.io/tutorial/first-app/first-app-le
     ``` json
     {
         "stack": {
-            "id": "io.buildpacks.stacks.bionic",
+            "id": "io.buildpacks.stacks.jammy",
             "version": "base"
         },
         "buildpackGroups": [
