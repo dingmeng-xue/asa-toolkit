@@ -30,7 +30,7 @@ The sample project comes from https://angular.io/tutorial/first-app/first-app-le
 
 ### Deployment script
 ```shell
-az spring app deploy --subscription 0753feba-86f1-4242-aff1-27938fb04531 -s {service-name} -g {resource-group} -n {app-name} --source-path . --build-env BP_NODE_RUN_SCRIPTS=build BP_WEB_SERVER=nginx BP_WEB_SERVER_ROOT=dist BP_WEB_SERVER_ENABLE_PUSH_STATE=true NPM_CONFIG_LEGACY_PEER_DEPS=true --builder {builder-name}
+az spring app deploy -s {service-name} -g {resource-group} -n {app-name} --source-path . --build-env BP_NODE_RUN_SCRIPTS=build BP_WEB_SERVER=nginx BP_WEB_SERVER_ROOT=dist BP_WEB_SERVER_ENABLE_PUSH_STATE=true NPM_CONFIG_LEGACY_PEER_DEPS=true --builder {builder-name}
 ```
 
 * `NPM_CONFIG_LEGACY_PEER_DEPS=true`, bypass peerDependency auto-installation because of the conflicts between NPM v7 and Angular.
