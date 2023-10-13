@@ -1,7 +1,8 @@
 The sample project comes from https://angular.io/tutorial/first-app/first-app-lesson-01
 
 # Option 1, Using customized builder without code change
-* Create customized builder and remove 
+### Prerequisite
+* Create customized builder and remove buildpack `npm-start` from default.
   * Create builder file, such as test.json
     ``` json
     {
@@ -36,6 +37,7 @@ az spring app deploy --subscription 0753feba-86f1-4242-aff1-27938fb04531 -s {ser
 * `--builder {builder-name}`, use customized builder specifically.
 
 # Option 2, Using default builder of ASA, but with code change
+### Prerequisite
 * Change `"zone.js": "~0.13.0"` in package.json because of the upstream dependency conflict
 * Change npm start script in `package.json` and append parameters `ng serve --host 0.0.0.0 --port 8080 --disable-host-check`[^1].
   - `host`, 
